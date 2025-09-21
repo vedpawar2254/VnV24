@@ -1,4 +1,4 @@
-import User from "../models/User.models.js";
+import User from "../models/User.model.js";
 import bcrypt from "bcryptjs";
 import { generateAccessToken, generateRefreshToken } from "../utils/token.js";
 
@@ -8,6 +8,9 @@ const cookieOptions = {
   sameSite: "lax",
   path: "/",
 };
+
+
+
 
 export const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
@@ -41,6 +44,8 @@ export const loginUser = async (req, res) => {
   res.json({ token: accessToken, user: { id: user._id, name: user.name, email } });
 };
 
+
+
 export const refreshToken = (req, res) => {
   const token = req.cookies.refreshToken;
   if (!token) return res.status(401).json({ message: "No refresh token" });
@@ -53,6 +58,9 @@ export const refreshToken = (req, res) => {
     return res.status(403).json({ message: "Invalid or expired refresh token" });
   }
 };
+
+
+
 
 export const logoutUser = (req, res) => {
   res.clearCookie("refreshToken", cookieOptions);
