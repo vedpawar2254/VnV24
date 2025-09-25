@@ -1,4 +1,3 @@
-// app/components/home/CategoryLinks.js
 import Link from 'next/link';
 
 const categories = [

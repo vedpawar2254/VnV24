@@ -1,4 +1,3 @@
-// app/components/Header.js
 import Link from 'next/link';
 import { ShoppingBag, User } from 'lucide-react'; // Let's add some icons
 

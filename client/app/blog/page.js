@@ -1,10 +1,9 @@
-// app/blog/page.js
 'use client';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-// --- Dummy Data for the Blog ---
+
 const posts = [
   {
     slug: 'the-art-of-layering-scents',
