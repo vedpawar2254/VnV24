@@ -1,11 +1,9 @@
-// app/about/page.js
 'use client';
 
 import { motion } from 'framer-motion';
 import { Leaf, Droplets, FlaskConical, MapPin, Phone, Mail } from 'lucide-react';
 
 export default function AboutPage() {
-  // Animation variants for sections
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
