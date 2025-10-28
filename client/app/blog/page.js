@@ -18,7 +18,7 @@ const posts = [
     title: 'A Journey Through Sandalwood: From Ancient Rituals to Modern Perfumery',
     category: 'Ingredient Spotlight',
     excerpt: 'Discover the rich history and calming properties of sandalwood, a cornerstone of fine perfumery for centuries.',
-    imageUrl: 'https://images.unsplash.com/photo-1596707316109-3a3699ed02c5?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+    imageUrl: 'https://images.unsplash.com/photo-1596707316109-5f33f6b215a2?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
   },
   {
     slug: 'top-5-essential-oils-for-relaxation',
@@ -58,7 +58,7 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="bg-white text-primary">
+    <div className="bg-primary text-text-dark">
       <div className="container mx-auto px-6 py-12">
         {/* --- Page Header --- */}
         <motion.div 
@@ -67,8 +67,8 @@ export default function BlogPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-          <h1 className="text-5xl font-serif font-bold text-gray-800">The Alchemist's Journal</h1>
-          <p className="mt-2 text-lg text-gray-600">A collection of stories, insights, and inspiration from our world of fragrance.</p>
+          <h1 className="text-5xl font-serif font-bold text-forest-green">The Alchemist's Journal</h1>
+          <p className="mt-2 text-lg text-text-dark">A collection of stories, insights, and inspiration from our world of fragrance.</p>
         </motion.div>
 
         {/* --- Featured Post --- */}
@@ -80,11 +80,11 @@ export default function BlogPage() {
           >
             <Link href={`/blog/${featuredPost.slug}`} className="group block relative w-full h-[50vh] rounded-lg overflow-hidden shadow-2xl mb-16">
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-105" style={{ backgroundImage: `url(${featuredPost.imageUrl})` }}></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/50 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-8 md:p-12 text-white">
-                <span className="text-sm font-bold uppercase tracking-widest text-accent">{featuredPost.category}</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-forest-green/80 via-forest-green/50 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-8 md:p-12 text-text-light">
+                <span className="text-sm font-bold uppercase tracking-widest text-gold">{featuredPost.category}</span>
                 <h2 className="text-3xl md:text-5xl font-serif font-bold mt-2">{featuredPost.title}</h2>
-                <p className="mt-4 max-w-2xl text-text-secondary hidden md:block">{featuredPost.excerpt}</p>
+                <p className="mt-4 max-w-2xl text-text-light/90 hidden md:block">{featuredPost.excerpt}</p>
               </div>
             </Link>
           </motion.div>
@@ -100,14 +100,14 @@ export default function BlogPage() {
         >
           {regularPosts.map((post) => (
             <motion.div key={post.slug} variants={itemVariants}>
-              <Link href={`/blog/${post.slug}`} className="group block bg-gray-50/70 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full">
+              <Link href={`/blog/${post.slug}`} className="group block bg-secondary rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full border border-border-color">
                 <div className="overflow-hidden">
                    <img src={post.imageUrl} alt={post.title} className="w-full h-56 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" />
                 </div>
                 <div className="p-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-accent">{post.category}</span>
-                  <h3 className="mt-2 text-2xl font-serif font-bold text-gray-800 leading-tight">{post.title}</h3>
-                  <p className="mt-3 text-gray-600 text-sm">{post.excerpt}</p>
+                  <span className="text-xs font-bold uppercase tracking-widest text-gold">{post.category}</span>
+                  <h3 className="mt-2 text-2xl font-serif font-bold text-forest-green leading-tight">{post.title}</h3>
+                  <p className="mt-3 text-text-dark text-sm">{post.excerpt}</p>
                 </div>
               </Link>
             </motion.div>

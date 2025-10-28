@@ -14,7 +14,7 @@ export default function ProductCard({ product, scrollYProgress }) {
 
   return (
     <Link href={`/shop/${product.id}`} className="group">
-      <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
+      <div className="aspect-square w-full overflow-hidden rounded-lg bg-primary border border-border-color shadow-sm hover:shadow-lg transition-shadow duration-300">
         {y ? (
           <motion.img
             src={product.imageUrl}
@@ -30,9 +30,12 @@ export default function ProductCard({ product, scrollYProgress }) {
           />
         )}
       </div>
-      <h3 className="mt-4 text-sm text-text-secondary">{product.category}</h3>
-      <p className="mt-1 text-lg font-medium text-text-primary">{product.name}</p>
-      <p className="mt-1 font-medium text-text-primary">{formattedPrice}</p>
+      <h3 className="mt-4 text-sm text-text-secondary font-medium">{product.category}</h3>
+      <p className="mt-1 text-lg font-medium text-forest-green">{product.name}</p>
+      <p className="mt-1 font-medium text-text-dark">{formattedPrice}</p>
+      <button className="mt-3 w-full bg-gold text-text-dark py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition-colors duration-300">
+        Add to Cart
+      </button>
     </Link>
   );
 }

@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     // Apply the font variables to the html tag
     <html lang="en" className={`${inter.variable} ${playfair_display.variable}`}>
-      <body className="bg-primary text-text-primary"> {/* Set default background and text color */}
+      <body className="bg-primary text-text-dark"> {/* Set default background and text color */}
         <Header />
         <main className="container mx-auto p-4">
           {children}

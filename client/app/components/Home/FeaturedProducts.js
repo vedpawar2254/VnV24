@@ -23,8 +23,8 @@ export default function FeaturedProducts() {
     <section ref={targetRef} className="relative h-[300vh] bg-secondary">
       <div className="sticky top-0 flex h-screen flex-col">
         <div className="container mx-auto px-4 text-center pt-24 pb-12">
-            <h2 className="text-5xl font-serif font-bold text-primary mb-2">Our Bestsellers</h2>
-            <p className="text-gray-600">Discover the fragrances our customers love the most.</p>
+            <h2 className="text-5xl font-serif font-bold text-forest-green mb-2">Our Bestsellers</h2>
+            <p className="text-text-secondary text-xl">Discover the fragrances our customers love the most.</p>
         </div>
         
         <div className="flex flex-grow items-center overflow-hidden">

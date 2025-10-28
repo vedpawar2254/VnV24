@@ -46,10 +46,10 @@ export default function ShopPage() {
   }, [selectedCategories, sortOrder]);
 
   return (
-    <div className="container mx-auto px-4 py-12 ">
+    <div className="container mx-auto px-4 py-12 bg-primary">
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-serif font-bold">Our Collection</h1>
-        <p className="mt-2 text-text-secondary">Browse our curated selection of fine fragrances and goods.</p>
+        <h1 className="text-5xl font-serif font-bold text-forest-green">Our Collection</h1>
+        <p className="mt-2 text-text-secondary text-xl">Browse our curated selection of fine fragrances and goods.</p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <FilterSidebar 
@@ -63,7 +63,7 @@ export default function ShopPage() {
           {filteredProducts.length > 0 ? (
             <ProductGrid products={filteredProducts} />
           ) : (
-            <p className="text-center text-text-secondary">No products found for the selected filters.</p>
+            <p className="text-center text-text-secondary text-lg">No products found for the selected filters.</p>
           )}
         </main>
       </div>
